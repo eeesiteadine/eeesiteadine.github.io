@@ -1,0 +1,11 @@
+{
+  "name": "eeesiteadine",
+  "description": "test samples",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "eeesiteadine.github.io",
+  "dependencies": {
+    "bootstrap-material-design": "~0.5.9"
+  }
+}
