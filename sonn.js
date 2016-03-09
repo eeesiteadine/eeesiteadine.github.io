@@ -1,6 +1,6 @@
 $("img").each(function() {
-
-    var src = "/res/genel_kültür00" + get_random(413) + ".jpg";
+    var num = get_random(413)
+    var src = "/res/genel_kültür00" + num + ".jpg";
     $(this).attr("src", src);
 });
 
