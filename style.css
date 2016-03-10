@@ -43,6 +43,7 @@ img {
     margin-top: 20px;
     color: #000;
     background: #fff;
+    background-image: url("res.jpg");
     position: relative;
     padding-top: 0px;
     padding-bottom: 0px;
