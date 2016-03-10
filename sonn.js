@@ -1,20 +1,26 @@
 $("img").each(function() {
     var num = get_random(413)
-    var src = "/res/genel_kültür00" + num + ".jpg";
+    var src = "/res/" + num + ".jpg";
+    $(this).attr("id", num);
     $(this).attr("src", src);
 });
 
 function get_random(x) {
     var num = Math.floor(Math.random() * x) + 1;
-    if (num > 10 && num < 100) {
-        return "0" + num;
-    } else if (num < 10) {
-        return "00" + num;
-    } else {
-        return num;
-    }
+    return num;
 }
-$("img").on("click", function() {
-    var src = "/res/genel_kültür00" + get_random(413) + ".jpg";
-    $(this).attr("src", src);
-})
+
+$(".left").on("click", function() {
+    id = $(this).parent().parent().find("img").attr("id");
+
+    $(this).parent().parent().find("img").attr("src", "/res/" + parseInt(id - 1) + ".jpg");
+    $(this).parent().parent().find("img").attr("id", parseInt(id - 1));
+    console.log(id)
+});
+$(".right").on("click", function() {
+    id = $(this).parent().parent().find("img").attr("id");
+    id = parseInt(id) + 1;
+    $(this).parent().parent().find("img").attr("src", "/res/" + id + ".jpg");
+    $(this).parent().parent().find("img").attr("id", id);
+    console.log(id)
+});
