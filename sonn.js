@@ -12,7 +12,6 @@ function get_random(x) {
 
 $(".left").on("click", function() {
     id = $(this).parent().parent().find("img").attr("id");
-
     $(this).parent().parent().find("img").attr("src", "/res/" + parseInt(id - 1) + ".jpg");
     $(this).parent().parent().find("img").attr("id", parseInt(id - 1));
     console.log(id)
@@ -24,3 +23,7 @@ $(".right").on("click", function() {
     $(this).parent().parent().find("img").attr("id", id);
     console.log(id)
 });
+$(".panel-body").on("dblclick", function() {
+    var id = $(this).find("img").attr("id");
+    localStorage.setItem("id", id);
+})
